@@ -1,3 +1,7 @@
+//This file is the main entry point for the front-end code. 
+//It initializes the HelloVue application by importing the root component (App.vue) 
+//and mounting it to the DOM. 
+
 // Importing the createApp function from the Vue.js library
 import { createApp } from 'vue';
 

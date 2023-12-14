@@ -1,3 +1,9 @@
+<!-- This is the root Vue component of the HelloVue application. 
+  It acts as a container for all other components. 
+  It defines the overall structure of your application, 
+  including the layout that persists across multiple pages or views. 
+  
+ -->
 <template>
   <MainPage />
 </template>

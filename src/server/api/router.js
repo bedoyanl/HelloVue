@@ -1,3 +1,9 @@
+//This file is part of the server-side of the application. 
+//Specifically, it's defining the routes for the Open AI API. 
+//router.js is responsible for handling different HTTP requests (like GET or POST) 
+//to specific endpoints on the express server (/api/chat)
+
+
 // Importing necessary modules for the code
 const express = require("express"); // Express is a web application framework for Node.js
 const { OpenAI } = require("openai"); // Importing OpenAI module to interact with the OpenAI API

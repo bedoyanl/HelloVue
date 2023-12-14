@@ -1,3 +1,8 @@
+//This file is handling the configuration settings for our server. 
+//It includes server port configurations, 
+//and any other settings needed for your server to run properly like cors. 
+//These Configurations are separated from the main server logic to make the application more modular and easier to maintain.
+
 // Importing necessary modules for configuring a Node.js server
 const cors = require("cors"); // CORS (Cross-Origin Resource Sharing) middleware for handling cross-origin HTTP requests
 const bodyParser = require("body-parser"); // Body-parser middleware for parsing incoming request bodies

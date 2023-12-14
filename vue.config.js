@@ -1,3 +1,7 @@
+//This file is used to configure HelloVue project. 
+//It allows us to customize the build process, configure webpack, 
+//and set various options for your application. 
+
 // Importing the defineConfig function from the "@vue/cli-service" package
 const { defineConfig } = require("@vue/cli-service");
 

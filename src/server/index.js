@@ -1,3 +1,9 @@
+//This file is the entry point for the server-side code. 
+//It's where the server is initialized and started. 
+//It includes the necessary imports for the server configurations, 
+//API routes, and other dependencies. Running this file would start your server 
+//and make it ready to handle incoming requests.
+
 // Importing necessary modules for setting up a Node.js server with Express
 const express = require("express"); // Express is a web application framework for Node.js
 const { configure, port } = require("./config/server-config"); // Importing the server configuration from "./config/server-config"
