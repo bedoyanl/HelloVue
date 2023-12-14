@@ -1,25 +1,43 @@
 <!-- ChatComponent.vue -->
 
 <template>
-  <div>
-    <label for="userInput">Enter something:</label>
-    <input v-model="userMessage" id="userInput" />
-    <button @click="sendMessage">Send to API</button>
+  <div class="flex-container">
+    <h2>HelloVue</h2>
 
-    <div v-if="apiResponse !== null">
-      <h3>API Response:</h3>
-      <p>{{ apiResponse }}</p>
-    </div>
+    <div>
+      <label for="userInput">Enter something:</label>
+      <input v-model="userMessage" id="userInput" />
+      <button @click="sendMessage">Send to API</button>
 
-    <div v-if="errorMessage">
-      <p>Error: {{ errorMessage }}</p>
-    </div>
+      <div v-if="apiResponse !== null">
+        <h3>API Response:</h3>
+        <p>{{ apiResponse }}</p>
+      </div>
 
-    <div v-if="loading">
-      <p>Loading...</p>
+      <div v-if="errorMessage">
+        <p>Error: {{ errorMessage }}</p>
+      </div>
+
+      <div v-if="loading">
+        <p>Loading...</p>
+      </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Center items horizontally */
+  justify-content: center; /* Optional: Center items vertically */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+</style>
 
 <script>
 import axios from 'axios';
