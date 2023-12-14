@@ -10,12 +10,26 @@
       <!-- User input section -->
       <div>
         <label for="userInput">Enter something:</label>
-        <!-- Input field with two-way data binding to userMessage -->
+        <!-- Input field with two-way data binding to userMessage 
+        v-model: This is a directive provided by Vue. 
+        It creates a two-way binding on the userMessage property, 
+        linking the input field's value to the userMessage data property.
+        
+        -->
         <input v-model="userMessage" id="userInput" />
-        <!-- Button triggers the sendMessage method on click -->
+        <!-- Button triggers the sendMessage method on click 
+        @click: This is a shorthand for v-on:click. 
+        It's an event binding that listens for a click event on the button and 
+        triggers the sendMessage method.
+        -->
         <button @click="sendMessage">Send to API</button>
   
-        <!-- Display API response if it is not null -->
+        <!-- Display API response if it is not null 
+        v-if: These are conditional directives that conditionally render or remove 
+        elements based on the truthiness of the specified expression. In this case, 
+        parts of the template are conditionally rendered based on the values of apiResponse, 
+        errorMessage, and loading.
+        -->
         <div v-if="apiResponse !== null">
           <h3>API Response:</h3>
           <!-- Display the API response data -->
@@ -36,7 +50,12 @@
   </template>
   
   <style scoped>
-  /* Styling for the main container */
+  /* Styling for the main container 
+  scoped: This is a Vue-specific attribute in the style section. 
+  It ensures that the styles defined in this component only apply to 
+  the elements within this component, providing encapsulation.
+  
+  */
   .flex-container {
     display: flex;
     flex-direction: column;
@@ -58,6 +77,9 @@
   // Export the Vue component
   export default {
     // Data properties for the component
+    //data(): This is a lifecycle hook in Vue components. It returns an object with the 
+    //initial data for the component.
+
     data() {
       return {
         userMessage: '',      // Input field value
@@ -67,6 +89,10 @@
       };
     },
     // Methods section for defining component methods
+    //methods: This is a section where you define methods that can be called in 
+    //response to user actions or other events. In this case, sendMessage is a 
+    //method that makes an asynchronous call using Axios to a chat API.
+
     methods: {
       // Asynchronous method to send a message to the API
       async sendMessage() {
